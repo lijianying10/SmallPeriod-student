@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sp_studentModelStoreContainer" CdmEntityContainer="DataBase">
+    <EntitySetMapping Name="tbl_class">
+      <EntityTypeMapping TypeName="sp_studentModel.tbl_class">
+        <MappingFragment StoreEntitySet="tbl_class">
+          <ScalarProperty Name="cl_index" ColumnName="cl_index" />
+          <ScalarProperty Name="cl_ID" ColumnName="cl_ID" />
+          <ScalarProperty Name="cl_Name" ColumnName="cl_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_course">
+      <EntityTypeMapping TypeName="sp_studentModel.tbl_course">
+        <MappingFragment StoreEntitySet="tbl_course">
+          <ScalarProperty Name="C_index" ColumnName="C_index" />
+          <ScalarProperty Name="C_Num" ColumnName="C_Num" />
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="C_Course" ColumnName="C_Course" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_stu_mark">
+      <EntityTypeMapping TypeName="sp_studentModel.tbl_stu_mark">
+        <MappingFragment StoreEntitySet="tbl_stu_mark">
+          <ScalarProperty Name="mk_index" ColumnName="mk_index" />
+          <ScalarProperty Name="stu_num" ColumnName="stu_num" />
+          <ScalarProperty Name="cou_num" ColumnName="cou_num" />
+          <ScalarProperty Name="mk_mark" ColumnName="mk_mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_student">
+      <EntityTypeMapping TypeName="sp_studentModel.tbl_student">
+        <MappingFragment StoreEntitySet="tbl_student">
+          <ScalarProperty Name="S_index" ColumnName="S_index" />
+          <ScalarProperty Name="S_Num" ColumnName="S_Num" />
+          <ScalarProperty Name="S_Name" ColumnName="S_Name" />
+          <ScalarProperty Name="S_Gender" ColumnName="S_Gender" />
+          <ScalarProperty Name="S_Birthday" ColumnName="S_Birthday" />
+          <ScalarProperty Name="S_Department" ColumnName="S_Department" />
+          <ScalarProperty Name="S_ClassID" ColumnName="S_ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_user">
+      <EntityTypeMapping TypeName="sp_studentModel.tbl_user">
+        <MappingFragment StoreEntitySet="tbl_user">
+          <ScalarProperty Name="U_index" ColumnName="U_index" />
+          <ScalarProperty Name="U_ID" ColumnName="U_ID" />
+          <ScalarProperty Name="U_PWD" ColumnName="U_PWD" />
+          <ScalarProperty Name="U_Power" ColumnName="U_Power" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_mark">
+      <EntityTypeMapping TypeName="sp_studentModel.v_mark">
+        <MappingFragment StoreEntitySet="v_mark">
+          <ScalarProperty Name="mk_index" ColumnName="mk_index" />
+          <ScalarProperty Name="stu_num" ColumnName="stu_num" />
+          <ScalarProperty Name="cou_num" ColumnName="cou_num" />
+          <ScalarProperty Name="mk_mark" ColumnName="mk_mark" />
+          <ScalarProperty Name="S_index" ColumnName="S_index" />
+          <ScalarProperty Name="S_Num" ColumnName="S_Num" />
+          <ScalarProperty Name="S_Name" ColumnName="S_Name" />
+          <ScalarProperty Name="S_Gender" ColumnName="S_Gender" />
+          <ScalarProperty Name="S_Birthday" ColumnName="S_Birthday" />
+          <ScalarProperty Name="S_Department" ColumnName="S_Department" />
+          <ScalarProperty Name="S_ClassID" ColumnName="S_ClassID" />
+          <ScalarProperty Name="C_index" ColumnName="C_index" />
+          <ScalarProperty Name="C_Num" ColumnName="C_Num" />
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="C_Course" ColumnName="C_Course" />
+          <ScalarProperty Name="cl_index" ColumnName="cl_index" />
+          <ScalarProperty Name="cl_ID" ColumnName="cl_ID" />
+          <ScalarProperty Name="cl_Name" ColumnName="cl_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

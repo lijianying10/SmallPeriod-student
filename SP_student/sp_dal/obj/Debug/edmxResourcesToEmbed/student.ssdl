@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sp_studentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="sp_studentModelStoreContainer">
+    <EntitySet Name="tbl_class" EntityType="sp_studentModel.Store.tbl_class" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_course" EntityType="sp_studentModel.Store.tbl_course" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_stu_mark" EntityType="sp_studentModel.Store.tbl_stu_mark" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_student" EntityType="sp_studentModel.Store.tbl_student" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_user" EntityType="sp_studentModel.Store.tbl_user" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="v_mark" EntityType="sp_studentModel.Store.v_mark" store:Type="Views" store:Schema="dbo" store:Name="v_mark">
+      <DefiningQuery>SELECT 
+      [v_mark].[mk_index] AS [mk_index], 
+      [v_mark].[stu_num] AS [stu_num], 
+      [v_mark].[cou_num] AS [cou_num], 
+      [v_mark].[mk_mark] AS [mk_mark], 
+      [v_mark].[S_index] AS [S_index], 
+      [v_mark].[S_Num] AS [S_Num], 
+      [v_mark].[S_Name] AS [S_Name], 
+      [v_mark].[S_Gender] AS [S_Gender], 
+      [v_mark].[S_Birthday] AS [S_Birthday], 
+      [v_mark].[S_Department] AS [S_Department], 
+      [v_mark].[S_ClassID] AS [S_ClassID], 
+      [v_mark].[C_index] AS [C_index], 
+      [v_mark].[C_Num] AS [C_Num], 
+      [v_mark].[C_Name] AS [C_Name], 
+      [v_mark].[C_Course] AS [C_Course], 
+      [v_mark].[cl_index] AS [cl_index], 
+      [v_mark].[cl_ID] AS [cl_ID], 
+      [v_mark].[cl_Name] AS [cl_Name]
+      FROM [dbo].[v_mark] AS [v_mark]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__tbl_stu_m__cou_n__1273C1CD" Association="sp_studentModel.Store.FK__tbl_stu_m__cou_n__1273C1CD">
+      <End Role="tbl_course" EntitySet="tbl_course" />
+      <End Role="tbl_stu_mark" EntitySet="tbl_stu_mark" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_stu_m__stu_n__1367E606" Association="sp_studentModel.Store.FK__tbl_stu_m__stu_n__1367E606">
+      <End Role="tbl_student" EntitySet="tbl_student" />
+      <End Role="tbl_stu_mark" EntitySet="tbl_stu_mark" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_stude__S_Cla__145C0A3F" Association="sp_studentModel.Store.FK__tbl_stude__S_Cla__145C0A3F">
+      <End Role="tbl_class" EntitySet="tbl_class" />
+      <End Role="tbl_student" EntitySet="tbl_student" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbl_class">
+    <Key>
+      <PropertyRef Name="cl_ID" />
+    </Key>
+    <Property Name="cl_index" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cl_ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="cl_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_course">
+    <Key>
+      <PropertyRef Name="C_Num" />
+    </Key>
+    <Property Name="C_index" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="C_Num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="C_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="C_Course" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_stu_mark">
+    <Key>
+      <PropertyRef Name="stu_num" />
+      <PropertyRef Name="cou_num" />
+    </Key>
+    <Property Name="mk_index" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="stu_num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="cou_num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mk_mark" Type="decimal" Nullable="false" Scale="3" />
+  </EntityType>
+  <EntityType Name="tbl_student">
+    <Key>
+      <PropertyRef Name="S_Num" />
+    </Key>
+    <Property Name="S_index" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="S_Num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="S_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="S_Gender" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="S_Birthday" Type="date" Nullable="false" />
+    <Property Name="S_Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="S_ClassID" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="U_ID" />
+    </Key>
+    <Property Name="U_index" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="U_ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="U_PWD" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="U_Power" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'sp_student.dbo.v_mark' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="v_mark">
+    <Key>
+      <PropertyRef Name="mk_index" />
+      <PropertyRef Name="stu_num" />
+      <PropertyRef Name="cou_num" />
+      <PropertyRef Name="mk_mark" />
+      <PropertyRef Name="S_index" />
+      <PropertyRef Name="S_Num" />
+      <PropertyRef Name="S_Name" />
+      <PropertyRef Name="S_Gender" />
+      <PropertyRef Name="S_Birthday" />
+      <PropertyRef Name="S_ClassID" />
+      <PropertyRef Name="C_index" />
+      <PropertyRef Name="C_Num" />
+      <PropertyRef Name="C_Name" />
+      <PropertyRef Name="cl_index" />
+      <PropertyRef Name="cl_ID" />
+      <PropertyRef Name="cl_Name" />
+    </Key>
+    <Property Name="mk_index" Type="int" Nullable="false" />
+    <Property Name="stu_num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="cou_num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mk_mark" Type="decimal" Nullable="false" Scale="3" />
+    <Property Name="S_index" Type="int" Nullable="false" />
+    <Property Name="S_Num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="S_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="S_Gender" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="S_Birthday" Type="date" Nullable="false" />
+    <Property Name="S_Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="S_ClassID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="C_index" Type="int" Nullable="false" />
+    <Property Name="C_Num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="C_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="C_Course" Type="nvarchar" MaxLength="50" />
+    <Property Name="cl_index" Type="int" Nullable="false" />
+    <Property Name="cl_ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="cl_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__tbl_stu_m__cou_n__1273C1CD">
+    <End Role="tbl_course" Type="sp_studentModel.Store.tbl_course" Multiplicity="1" />
+    <End Role="tbl_stu_mark" Type="sp_studentModel.Store.tbl_stu_mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_course">
+        <PropertyRef Name="C_Num" />
+      </Principal>
+      <Dependent Role="tbl_stu_mark">
+        <PropertyRef Name="cou_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_stu_m__stu_n__1367E606">
+    <End Role="tbl_student" Type="sp_studentModel.Store.tbl_student" Multiplicity="1" />
+    <End Role="tbl_stu_mark" Type="sp_studentModel.Store.tbl_stu_mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_student">
+        <PropertyRef Name="S_Num" />
+      </Principal>
+      <Dependent Role="tbl_stu_mark">
+        <PropertyRef Name="stu_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_stude__S_Cla__145C0A3F">
+    <End Role="tbl_class" Type="sp_studentModel.Store.tbl_class" Multiplicity="1" />
+    <End Role="tbl_student" Type="sp_studentModel.Store.tbl_student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_class">
+        <PropertyRef Name="cl_ID" />
+      </Principal>
+      <Dependent Role="tbl_student">
+        <PropertyRef Name="S_ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

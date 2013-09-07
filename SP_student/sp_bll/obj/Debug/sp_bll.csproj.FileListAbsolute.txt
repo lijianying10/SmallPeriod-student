@@ -1,0 +1,16 @@
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\bin\Debug\sp_bll.dll
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\bin\Debug\sp_bll.pdb
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\bin\Debug\sp_dal.dll
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\bin\Debug\sp_dal.pdb
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\obj\Debug\sp_bll.dll
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\obj\Debug\sp_bll.pdb
+C:\Documents and Settings\1\桌面\324234234234\SP_student\sp_bll\bin\Debug\sp_bll.dll.config
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\bin\Debug\sp_bll.dll.config
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\bin\Debug\sp_bll.dll
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\bin\Debug\sp_bll.pdb
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\bin\Debug\sp_dal.dll
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\bin\Debug\sp_dal.pdb
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\obj\Debug\sp_bll.csprojResolveAssemblyReference.cache
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\obj\Debug\sp_bll.dll
+C:\Users\jianYing\Desktop\324234234234\SP_student\sp_bll\obj\Debug\sp_bll.pdb
