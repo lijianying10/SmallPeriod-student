@@ -52,6 +52,10 @@
       <Project>{50C73088-342A-4593-BAFF-B420096BCAD6}</Project>
       <Name>sp_bll</Name>
     </ProjectReference>
+    <ProjectReference Include="..\sp_dal\sp_dal.csproj">
+      <Project>{e7cc3fb9-b4f3-45c8-a7f8-8c571b17add2}</Project>
+      <Name>sp_dal</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

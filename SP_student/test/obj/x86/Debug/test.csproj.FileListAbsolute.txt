@@ -18,3 +18,13 @@ C:\Users\jianYing\Desktop\324234234234\SP_student\test\bin\Debug\sp_dal.dll
 C:\Users\jianYing\Desktop\324234234234\SP_student\test\bin\Debug\sp_bll.pdb
 C:\Users\jianYing\Desktop\324234234234\SP_student\test\bin\Debug\sp_dal.pdb
 C:\Users\jianYing\Desktop\324234234234\SP_student\test\obj\x86\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\test.exe.config
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\test.exe
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\test.pdb
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\sp_bll.dll
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\sp_dal.dll
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\sp_bll.pdb
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\bin\Debug\sp_dal.pdb
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\obj\x86\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\obj\x86\Debug\test.exe
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\test\obj\x86\Debug\test.pdb

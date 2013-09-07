@@ -94,7 +94,7 @@ namespace sp_bll
         /// delete a user
         /// 
         /// 1.connect to database
-        /// 2.remove user
+        /// 2.reget the user from database
         /// 3.save database change
         /// </summary>
         /// <param name="user">input user</param>
@@ -105,7 +105,10 @@ namespace sp_bll
             try
             {
                 var db = new DataBase();
-                db.tbl_user.DeleteObject(user);
+                tbl_user deleteuser = (from d in db.tbl_user
+                                       where d.U_ID == user.U_ID
+                                       select d).Single();
+                db.DeleteObject(deleteuser);
                 db.SaveChanges();
             }
             catch (Exception ex)

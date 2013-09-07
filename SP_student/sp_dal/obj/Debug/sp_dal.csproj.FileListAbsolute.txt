@@ -10,3 +10,8 @@ C:\Users\jianYing\Desktop\324234234234\SP_student\sp_dal\bin\Debug\sp_dal.pdb
 C:\Users\jianYing\Desktop\324234234234\SP_student\sp_dal\obj\Debug\sp_dal.csprojResolveAssemblyReference.cache
 C:\Users\jianYing\Desktop\324234234234\SP_student\sp_dal\obj\Debug\sp_dal.dll
 C:\Users\jianYing\Desktop\324234234234\SP_student\sp_dal\obj\Debug\sp_dal.pdb
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_dal\bin\Debug\sp_dal.dll.config
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_dal\bin\Debug\sp_dal.dll
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_dal\bin\Debug\sp_dal.pdb
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_dal\obj\Debug\sp_dal.dll
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_dal\obj\Debug\sp_dal.pdb
