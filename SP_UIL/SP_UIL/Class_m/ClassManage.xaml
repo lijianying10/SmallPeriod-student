@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SP_UIL.Class_m.ClassManage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" Height="504.8" Width="677.6">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <Grid Height="432" Width="603">
+                <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Name="dg_class" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="280" Width="552">
+                    <DataGrid.Columns>
+                        <mui:DataGridCheckBoxColumn  Header="Delete" Binding="{Binding Delete}" />
+                        <mui:DataGridCheckBoxColumn Header="Update" Binding="{Binding Update}" />
+                        <mui:DataGridTextColumn Header="ID"  Binding="{Binding ID}"/>
+                        <mui:DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Click="Button_Click_1" Content="submit" HorizontalAlignment="Left" Margin="49,320,0,0" VerticalAlignment="Top" Width="75"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

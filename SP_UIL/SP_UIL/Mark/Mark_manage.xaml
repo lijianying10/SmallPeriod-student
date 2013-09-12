@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="SP_UIL.Mark.Mark_manage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" Height="568" Width="760.8">
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.ColumnSpan="2" Margin="0,0,-0.2,0.4">
+            <Grid Height="468" Width="707">
+                <ComboBox Name="cb_class" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="120"/>
+                <Button Click="btn_temp_output_Click_1" Name="btn_temp_output" Content="output template" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Width="147"/>
+                <Label Content="Choose Class" HorizontalAlignment="Left" Margin="19,14,0,0" VerticalAlignment="Top"/>
+                <Button Click="Button_Click_1" Content="Input mark" HorizontalAlignment="Left" Margin="28,59,0,0" VerticalAlignment="Top" Width="145"/>
+                <DataGrid  ItemsSource="{Binding}" AutoGenerateColumns="False" Name="dg_mark" HorizontalAlignment="Left" Margin="41,135,0,0" VerticalAlignment="Top" Height="263" Width="603">
+                    <DataGrid.Columns>
+                        <mui:DataGridCheckBoxColumn  Header="Delete" Binding="{Binding Delete}" />
+                        <mui:DataGridCheckBoxColumn Header="Update" Binding="{Binding Update}" />
+                        <mui:DataGridTextColumn Header=" ID"  Binding="{Binding stu_num }"/>
+                        <mui:DataGridTextColumn Header=" name"  Binding="{Binding s_name }"/>
+                        <mui:DataGridTextColumn Header="gener"  Binding="{Binding s_gender }"/>
+                        <mui:DataGridTextColumn Header="department"  Binding="{Binding S_department }"/>
+                        <mui:DataGridTextColumn Header="Course name"  Binding="{Binding C_name }"/>
+                        <mui:DataGridTextColumn Header="Course mark"  Binding="{Binding C_mark }"/>
+                        <mui:DataGridTextColumn Header="Course describe"  Binding="{Binding C_course }"/>
+                        <mui:DataGridTextColumn Header="class name"  Binding="{Binding cl_name}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBox Name="tb_condation" HorizontalAlignment="Left" Height="23" Margin="28,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Button Click="Button_Click_2" Content="Search" HorizontalAlignment="Left" Margin="153,100,0,0" VerticalAlignment="Top" Width="75"/>
+                <GridSplitter HorizontalAlignment="Left" Height="8" Margin="10,41,0,0" VerticalAlignment="Top" Width="473"/>
+                <GridSplitter HorizontalAlignment="Left" Height="8" Margin="10,90,0,0" VerticalAlignment="Top" Width="473"/>
+                <GridSplitter HorizontalAlignment="Left" Height="8" Margin="19,431,0,0" VerticalAlignment="Top" Width="473"/>
+                <DataGrid HorizontalAlignment="Left" Margin="102,222,0,0" VerticalAlignment="Top"/>
+                <Button Content="Submit" HorizontalAlignment="Left" Margin="41,400,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+                <ComboBox x:Name="cb_class_Copy" HorizontalAlignment="Left" Margin="94,438,0,0" VerticalAlignment="Top" Width="120"/>
+                <Button ToolTip="update mark only" Click="btn_temp_output_Copy_Click_1" x:Name="btn_temp_output_Copy" Content="Analyse class" HorizontalAlignment="Left" Margin="219,438,0,0" VerticalAlignment="Top" Width="147"/>
+                <Label Content="Choose Class" HorizontalAlignment="Left" Margin="19,442,0,0" VerticalAlignment="Top"/>
+                <GridSplitter HorizontalAlignment="Left" Height="100" Margin="89,222,0,0" VerticalAlignment="Top" Width="5"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

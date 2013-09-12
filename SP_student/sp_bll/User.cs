@@ -167,5 +167,24 @@ namespace sp_bll
         }
         #endregion
 
+        public static tbl_user get_single_user(string uid)
+        {
+            try
+            {
+                using (var db = new DataBase())
+                {
+                    var vu = from data in db.tbl_user
+                             where data.U_ID == uid
+                             select data;
+                    return vu.Single();
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            
+        }
+
     }
 }

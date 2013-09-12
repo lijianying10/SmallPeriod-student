@@ -18,6 +18,7 @@ C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\bin\Deb
 C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\bin\Debug\sp_bll.dll
 C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\bin\Debug\sp_bll.pdb
 C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\bin\Debug\sp_dal.dll
+C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\bin\Debug\System.Linq.Dynamic.dll
 C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\bin\Debug\sp_dal.pdb
 C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\obj\Debug\sp_bll.csprojResolveAssemblyReference.cache
 C:\Users\jianYing\Documents\GitHub\SmallPeriod-student\SP_student\sp_bll\obj\Debug\sp_bll.dll

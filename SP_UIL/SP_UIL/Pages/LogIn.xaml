@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SP_UIL.Pages.LogIn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" Height="597.6" Width="749.6">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <Grid Height="518" >
+                    <TextBox Name="tb_id" ToolTip="Input ID here" Margin="170,145,342.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                    <PasswordBox Name="pb_pwd" ToolTip="Input password here" Margin="170,172,342.6,0"  VerticalAlignment="Top"/>
+                    <Button Name="btn_login" Click="btn_login_Click_1"  Content="LogIn" HorizontalAlignment="Left" Margin="402,145,0,0" Width="75" VerticalAlignment="Top" Height="49"/>
+                    <Label  Content="ID" HorizontalAlignment="Left" Margin="154,145,0,0" VerticalAlignment="Top"/>
+                    <Label Content="password" HorizontalAlignment="Left" Margin="115,172,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            
+
+                <!--TextBlock Text="LogIn window" Style="{StaticResource Heading2}" Width="148" />
+                <Label>ID</Label>
+                <TextBox Width="148" Name="tb_id"/>
+                <PasswordBox Width="148" Name="tb_pwd"/!-->
+            </StackPanel>
+
+
+
+        </ScrollViewer>
+    </Grid>
+</UserControl>

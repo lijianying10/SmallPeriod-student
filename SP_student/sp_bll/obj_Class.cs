@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Text;
 using sp_dal;
 
@@ -78,6 +79,11 @@ namespace sp_bll
         #endregion
 
         #region delete
+        /// <summary>
+        /// delete a class 
+        /// </summary>
+        /// <param name="objclass">insert a class</param>
+        /// <returns>error information</returns>
         public static Err delete(tbl_class objclass)
         {
             Err e = new Err();
@@ -98,5 +104,92 @@ namespace sp_bll
             return e;
         }
         #endregion
+
+        public static string get_classid(string class_name)
+        {
+            try { 
+                using(var db = new DataBase())
+                {
+                    return (
+                        from d in db.tbl_class
+                        where d.cl_Name == class_name
+                        select d
+                        ).Single().cl_ID;
+                }
+            }
+            catch(Exception ex)
+            {
+                return "not exists";
+            }
+        }
+
+        public static string get_className(string class_id)
+        {
+            try
+            {
+                using (var db = new DataBase())
+                {
+                    return (
+                        from d in db.tbl_class
+                        where d.cl_ID == class_id
+                        select d
+                        ).Single().cl_Name;
+                }
+            }
+            catch (Exception ex)
+            {
+                return "not exists";
+            }
+        }
+
+        public static string[] get_classids(string class_name)
+        {
+            try
+            {
+                using (var db = new DataBase())
+                {
+                    List<tbl_class> ccc = (
+                        from d in db.tbl_class
+                        where d.cl_Name.IndexOf(class_name) >= 0
+                        select d
+                        ).ToList();
+                    List<string> res = new List<string>();
+                    foreach (var c in ccc)
+                    {
+                        res.Add(c.cl_ID);
+                    }
+                    return res.ToArray();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                return new string[]{"not exists",""};
+            }
+        }
+
+        public static tbl_class get_single_class(string class_id)
+        {
+            try
+            {
+                using (var db = new DataBase())
+                {
+                    return (
+                        from d in db.tbl_class
+                        where d.cl_ID == class_id
+                        select d
+                        ).Single();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        #region other
+        
+        #endregion
+
     }
 }

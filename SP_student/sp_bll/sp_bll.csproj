@@ -34,6 +34,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\..\..\..\Visual Studio 2012\Projects\sample\packages\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,10 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course.cs" />
     <Compile Include="Err.cs" />
+    <Compile Include="Mark.cs" />
     <Compile Include="obj_Class.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="mark_process.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sp_dal\sp_dal.csproj">

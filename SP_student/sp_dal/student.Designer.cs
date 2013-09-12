@@ -8,12 +8,13 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -169,6 +170,7 @@ namespace sp_dal
         private ObjectSet<v_mark> _v_mark;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -220,11 +222,11 @@ namespace sp_dal
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -253,6 +255,7 @@ namespace sp_dal
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -331,6 +334,7 @@ namespace sp_dal
         partial void Oncl_NameChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -357,6 +361,7 @@ namespace sp_dal
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -385,6 +390,7 @@ namespace sp_dal
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -487,6 +493,7 @@ namespace sp_dal
         partial void OnC_CourseChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -513,6 +520,7 @@ namespace sp_dal
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -543,6 +551,7 @@ namespace sp_dal
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -648,6 +657,7 @@ namespace sp_dal
         partial void Onmk_markChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -728,6 +738,7 @@ namespace sp_dal
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -762,6 +773,7 @@ namespace sp_dal
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -936,6 +948,7 @@ namespace sp_dal
         partial void OnS_ClassIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1000,6 +1013,7 @@ namespace sp_dal
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1030,6 +1044,7 @@ namespace sp_dal
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1132,6 +1147,7 @@ namespace sp_dal
         partial void OnU_PowerChanged();
 
         #endregion
+
     
     }
     
@@ -1187,6 +1203,7 @@ namespace sp_dal
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1670,9 +1687,11 @@ namespace sp_dal
         partial void Oncl_NameChanged();
 
         #endregion
+
     
     }
 
     #endregion
+
     
 }
